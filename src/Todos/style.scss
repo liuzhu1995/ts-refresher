@@ -1,0 +1,60 @@
+.header {
+  padding: 0 12px;
+  text-align: center;
+}
+.header img {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}
+.header h1 {
+  font-size: 18px;
+  color: #ebf646;
+}
+
+.goal-list {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  color: #fff;
+}
+.goal-list li {
+  box-sizing: border-box;
+  width: 50%;
+  margin-bottom: 12px;
+}
+
+.goal-item .goal-content {
+  padding: 12px;
+  margin: 12px;
+  background-color: #3f4d49;
+}
+.goal-item .goal-head {
+  display: flex;
+  align-items: center;
+  line-height: 30px;
+}
+.goal-item .goal-title {
+  flex: 1;
+  font-size: 18px;
+  font-weight: 600;
+}
+.goal-item .goal-delete {
+  color: #b8b8b2;
+  background-color: transparent;
+  border: none;
+}
+
+.goal-form {
+  color: #fff;
+  font-size: 20px;
+}
+
+.goal-form label {
+  display: inline-block;
+  width: 180px;
+}
+
+.goal-form input {
+  line-height: 24px;
+}
