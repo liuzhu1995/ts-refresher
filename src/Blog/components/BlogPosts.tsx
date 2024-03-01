@@ -1,7 +1,9 @@
 type BlogPost = {
-  id: string
+  userId: number
+  id: number
   title: string
   text: string
+  body: string
 }
 type BlogPostsProps = {
   posts: BlogPost[]
