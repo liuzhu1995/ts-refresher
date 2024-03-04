@@ -1,8 +1,6 @@
-type BlogPost = {
-  userId: number
+export type BlogPost = {
   id: number
   title: string
-  text: string
   body: string
 }
 type BlogPostsProps = {
@@ -15,8 +13,12 @@ export default function BlogPosts({ posts }: BlogPostsProps) {
       <ul>
         {posts.map((post) => (
           <li key={post.id}>
-            <h3>{post.title}</h3>
-            <p>{post.text}</p>
+            <div className='card'>
+              <div className='card-body'>
+                <h2 className='card-title'>{post.title}</h2>
+                <p className='card-text'>{post.body}</p>
+              </div>
+            </div>
           </li>
         ))}
       </ul>

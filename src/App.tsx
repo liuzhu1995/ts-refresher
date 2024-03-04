@@ -9,7 +9,8 @@ function App() {
     <>
       {/* <Todos /> */}
       {/* <Adv /> */}
-      <TimerTodos />
+      {/* <TimerTodos /> */}
+      <Blog />
     </>
   )
 }

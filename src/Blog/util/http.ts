@@ -8,5 +8,3 @@ export async function get(url: string) {
   console.log(data)
   return data
 }
-
-get('https://jsonplaceholder.typicode.com/posts')
