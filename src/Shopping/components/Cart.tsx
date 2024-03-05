@@ -9,12 +9,12 @@ export default function Cart({ onClose }: CartProps) {
       <div className='card-backdrop'></div>
       <div id='cart-modal'>
         <h2>Your Cart</h2>
-        <p id='cart-actions'>
-          <CartItems cartItems={[]} />
+        <div id='cart-actions'>
+          <CartItems />
           <button onClick={onClose}>Close</button>
-        </p>
+        </div>
       </div>
     </>,
-    document.querySelector('.modal')!
+    document.querySelector('#modal')!
   )
 }

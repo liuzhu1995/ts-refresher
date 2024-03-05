@@ -1,8 +1,16 @@
 import { useState } from 'react'
+import { useCartDispatch, useCartSelector } from '../../store/hooks'
+import { fetchTodo } from '../../store/todos-slice'
 import Cart from './Cart'
 
 export default function Header() {
   const [cartIsVisible, setCartIsVisible] = useState(false)
+  const dispatch = useCartDispatch()
+  const totalQuanity = useCartSelector((state) =>
+    state.cart.items.reduce((prev, current) => {
+      return prev + current.quantity
+    }, 0)
+  )
   function handleOpenCartClick() {
     setCartIsVisible(true)
   }
@@ -18,7 +26,8 @@ export default function Header() {
           <h1>Elegant Redux</h1>
         </div>
         <p>
-          <button onClick={handleOpenCartClick}>Cart(0)</button>
+          <button onClick={handleOpenCartClick}>Cart({totalQuanity})</button>
+          <button onClick={() => dispatch(fetchTodo())}>Fetch</button>
         </p>
       </header>
     </>
